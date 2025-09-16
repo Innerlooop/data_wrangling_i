@@ -11,8 +11,44 @@ Here's a **code chunk** that samples from
 a _normal distribution_:
 
 ```{r}
+litters_df <-
+    read_csv("./data_import_examples/FAS_litters.csv")
+```
+
+```{r}
+litters_df <-
+  janitor::clean_names(litters_df)
+```
+
+```{r}
+litters_df
+```
+
+```{r}
+skimr::skim(litters_df)
+```
+
+```{r}
+litters_pups <-
+  read_csv("data_import_examples/FAS_pups.csv", skip = 3, col_names = TRUE, na = "NA", "")
+litters_pups <-
+  janitor::clean_names(litters_pups)
+
+```
+
+```{r}
 samp = rnorm(100)
 length(samp)
+```
+
+```{r}
+mlb_df <-
+  read_excel("data_import_examples/mlb11.xlsx")
+```
+
+```{r}
+fort_df <-
+  read_excel("data_import_examples/LotR_Words.xlsx", range = "B3:D6")
 ```
 
 # Section 2

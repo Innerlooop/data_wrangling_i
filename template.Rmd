@@ -33,7 +33,6 @@ litters_pups <-
   read_csv("data_import_examples/FAS_pups.csv", skip = 3, col_names = TRUE, na = "NA", "")
 litters_pups <-
   janitor::clean_names(litters_pups)
-
 ```
 
 ```{r}
@@ -51,7 +50,21 @@ fort_df <-
   read_excel("data_import_examples/LotR_Words.xlsx", range = "B3:D6")
 ```
 
+```{r}
+pulse_df <-
+  read_sas("data_import_examples/LotR_Words.xlsx")
+
+pulse_df <-
+  janitor::clean_names(pulse_df)
+```
+
+
+```{r}
+litters_df_base <-
+  read_csv("data_import_examples/FAS_litters.csv")
+```
 # Section 2
 
-I can take the mean of the sample, too!
-The mean is `r mean(samp)`.
+```{r}
+
+```
